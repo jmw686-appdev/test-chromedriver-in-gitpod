@@ -1,4 +1,4 @@
-image: jelaniwoods/appdev-base:test
+image: jelaniwoods/appdev-base:chromedriver-0
 
 tasks:
   - init: bin/setup

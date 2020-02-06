@@ -19,7 +19,8 @@ require "#{File.expand_path('../support/hint_formatter', __FILE__)}"
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.example_status_persistence_file_path = "examples.txt"
-
+  require 'capybara/rspec'
+  Capybara.javascript_driver = :selenium_chrome
   def h(hint_identifiers)
     hint_identifiers.split.map { |identifier| I18n.t("hints.#{identifier}") }
   end
